@@ -1,0 +1,21 @@
+# Enabling H2 Console
+spring:
+  datasource:
+    jdbcUrl: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
